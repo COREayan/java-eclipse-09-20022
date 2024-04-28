@@ -4,41 +4,28 @@ import java.util.*;
 
 public class arraysIntroduction {
 	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-		/*
-		 * Arrays in Java are like a list of elements of the same type i.e. a list of integers, a list of booleans etc.
-		 * 
-		 * 3 Methods to Create an Array
-		 * 
-		 * =>	a) with new keyword
-		 * 		int[] marks = new int[3];
-		 * 		marks[0] = 97;
-		 * 		marks[1] = 98;
-		 * 		marks[2] = 95;
-		 * 
-		 * => 	b) int[] marks = {98, 97, 95};
-		 * 
-		 * =>	c) Taking an array as an input and printing its elements.
-		 * 
-//				import java.util.*;
-//				
-//				public class Arrays {
-//					public static void main(String args[]) {
-//						Scanner sc = new Scanner(System.in);
-//						int size = sc.nextInt();
-//						int numbers[] = new int[size];
-//						
-//						for (int i=0; i<size; i++) {
-//							numbers[i] = sc.nextInt();
-//						}
-//						
-//						//print the numbers in array
-//						for (int i=0; i<numbers.length; i++) {
-//							System.out.print(numbers[i] + " ");
-//						}
-//					}
-//				}
-		 * */
+		try (Scanner sc = new Scanner(System.in)) {
+			System.out.println();
+			System.out.println("3. Take an array of numbers as input and check if it is an array sorted in ascending order.");
+			int size = sc.nextInt();
+			int[] numbers = new int[size];
+			for (int i=0; i<size; i++) {
+				numbers[i] = sc.nextInt();
+			}
+			
+			boolean isAscending = true;
+			for (int i=0; i<numbers.length-1; i++) {
+				if (numbers[i] > numbers[i+1]) {
+					isAscending = false;
+				}
+			}
+			
+			if (isAscending) {
+				System.out.println("The array is sorted in ascending order");
+			} else {
+				System.out.println("The array is not sorted in ascending order");
+			}
+		}
 		
 		/*
 		System.out.println();
@@ -74,27 +61,6 @@ public class arraysIntroduction {
 		System.out.println("max : " + max);
 		System.out.println("min : " + min);
 		*/
-		
-		System.out.println();
-		System.out.println("3. Take an array of numbers as input and check if it is an array sorted in ascending order.");
-		int size = sc.nextInt();
-		int[] numbers = new int[size];
-		for (int i=0; i<size; i++) {
-			numbers[i] = sc.nextInt();
-		}
-		
-		boolean isAscending = true;
-		for (int i=0; i<numbers.length-1; i++) {
-			if (numbers[i] > numbers[i+1]) {
-				isAscending = false;
-			}
-		}
-		
-		if (isAscending) {
-			System.out.println("The array is sorted in ascending order");
-		} else {
-			System.out.println("The array is not sorted in ascending order");
-		}
 		
 	}
 }

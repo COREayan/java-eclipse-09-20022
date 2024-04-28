@@ -177,11 +177,11 @@ public class QueueB {
 		static Stack<Integer> s1 = new Stack<>();
 		static Stack<Integer> s2 = new Stack<>();
 		
-		public static boolean isEmpty() {
+		public boolean isEmpty() {
 			return s1.isEmpty();
 		}
 		
-		public static void add(int data) {
+		public void add(int data) {
 			while(!s1.isEmpty()) {
 				s2.push(s1.pop());
 			}
@@ -193,7 +193,7 @@ public class QueueB {
 			}
 		}
 		
-		public static int remove() {
+		public int remove() {
 			if(isEmpty()) {
 				System.out.println("Empty Queue");
 				return -1;
@@ -202,7 +202,7 @@ public class QueueB {
 			return s1.pop();
 		}
 		
-		public static int peek() {
+		public int peek() {
 			if(isEmpty()) {
 				System.out.println("Empty Queue");
 				return -1;

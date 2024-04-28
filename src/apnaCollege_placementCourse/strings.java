@@ -3,7 +3,8 @@ import java.util.*;
 
 public class strings {
 	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
+		try (Scanner sc = new Scanner(System.in)) {
+		}
 		
 		// Declaration
 		String name = "Ayanabha";

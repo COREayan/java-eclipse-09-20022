@@ -51,51 +51,52 @@ public class _2DArrays {
 		}
 		*/
 		
-		//	HOMEWORK PROBLEMS
-		//	1. Print the spiral order matrix as output for a given matrix of numbers.
-		Scanner sc = new Scanner(System.in);
-		int row = sc.nextInt();
-		int col = sc.nextInt();
-		int[][] numbers = new int[row][col];
-		
-		for (int i=0; i<row; i++) {
-			for (int j=0; j<col; j++) {
-				numbers[i][j] = sc.nextInt();
-			}
-		}
-		
-		System.out.println("The Spiral Order Matrix is : ");
-		
-		int rowStart = 0;
-		int rowEnd = row-1;
-		int colStart = 0;
-		int colEnd = col-1;
-		
-		while(rowStart<=rowEnd && colStart<=colEnd) {
-			// 1
-			for (int i=colStart; i<=colEnd; i++) {
-				System.out.print(numbers[rowStart][i]+" ");
-			}
-			rowStart++;
+		try (//	HOMEWORK PROBLEMS
+				//	1. Print the spiral order matrix as output for a given matrix of numbers.
+		Scanner sc = new Scanner(System.in)) {
+			int row = sc.nextInt();
+			int col = sc.nextInt();
+			int[][] numbers = new int[row][col];
 			
-			// 2
-			for (int j=rowStart; j<=rowEnd; j++) {
-				System.out.print(numbers[j][colEnd]+" ");
+			for (int i=0; i<row; i++) {
+				for (int j=0; j<col; j++) {
+					numbers[i][j] = sc.nextInt();
+				}
 			}
-			colEnd--;
 			
-			// 3
-			for (int i=colEnd; i>=colStart; i--) {
-				System.out.print(numbers[rowEnd][i]+" ");
+			System.out.println("The Spiral Order Matrix is : ");
+			
+			int rowStart = 0;
+			int rowEnd = row-1;
+			int colStart = 0;
+			int colEnd = col-1;
+			
+			while(rowStart<=rowEnd && colStart<=colEnd) {
+				// 1
+				for (int i=colStart; i<=colEnd; i++) {
+					System.out.print(numbers[rowStart][i]+" ");
+				}
+				rowStart++;
+				
+				// 2
+				for (int j=rowStart; j<=rowEnd; j++) {
+					System.out.print(numbers[j][colEnd]+" ");
+				}
+				colEnd--;
+				
+				// 3
+				for (int i=colEnd; i>=colStart; i--) {
+					System.out.print(numbers[rowEnd][i]+" ");
+				}
+				rowEnd--;
+				
+				// 4
+				for (int j=rowEnd; j>=rowStart; j--) {
+					System.out.print(numbers[j][colStart]+" ");
+				}
+				colStart++;
+				
 			}
-			rowEnd--;
-			
-			// 4
-			for (int j=rowEnd; j>=rowStart; j--) {
-				System.out.print(numbers[j][colStart]+" ");
-			}
-			colStart++;
-			
 		}
 	}
 }

@@ -1,5 +1,4 @@
 package apnaCollege_placementCourse;
-import java.util.*;
 
 public class IntroLinkedList1 {
 	public static void main(String[] args) {

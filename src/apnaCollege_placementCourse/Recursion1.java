@@ -7,6 +7,7 @@ import java.io.InputStreamReader;
 public class Recursion1 {
 	
 	public static void main(String[] args) throws IOException {
+		@SuppressWarnings("unused")
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		/*
 		// Q1. Print numbers from 5 to 1

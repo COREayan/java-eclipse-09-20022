@@ -18,6 +18,7 @@ public class TRIE {
 	public static Node root = new Node();
 	
 	// Insert in Trie -- O(L) - L : length of String 
+	@SuppressWarnings("unused")
 	public static void insert(String word) {
 		int level = 0; 
 		int len = word.length(); 

@@ -34,7 +34,6 @@ public class HashmapImplementation {
 		
 		private int searchInLL(K key, int bi) {
 			LinkedList<Node> ll = buckets[bi];
-			int di = 0;
 			for(int i=0; i<ll.size(); i++) {
 				if(ll.get(i).key == key) {
 					return i; // di
@@ -44,6 +43,7 @@ public class HashmapImplementation {
 			return -1;
 		}
 		
+		@SuppressWarnings("unchecked")
 		private void rehash() {
 			LinkedList<Node> oldBucket[] = buckets;
 			buckets = new LinkedList[N*2];

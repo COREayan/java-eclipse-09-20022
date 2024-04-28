@@ -1,10 +1,10 @@
 package apnaCollege_placementCourse;
 import java.util.Scanner;
-import java.util.Collections;
 
 public class stringBuilder {
 	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
+		try (Scanner sc = new Scanner(System.in)) {
+		}
 		
 		// Declaration
 		StringBuilder sb = new StringBuilder("Apna College");
